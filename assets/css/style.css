@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px dashed red;
 }
 
 :root {
@@ -26,7 +25,6 @@ a{
 
 section {
     display: flex;
-    flex-flow: column;
     align-items: center;
     justify-content: space-around;
 }
@@ -50,7 +48,7 @@ header h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 23%;
+    width: 25%;
 
 }
 
@@ -112,12 +110,14 @@ ul li a {
     color: var(--dark);
 }
 
-.hero-img {
+.hero-img{
+    width: 25%;
     margin: 3%;
 }
 
-.hero-img img {
-    border: 3px solid var(--light);
+.personal-image img{
+    width: 100%;
+    height: 100%;
 }
 
 /* End Hero Styling */
@@ -126,34 +126,30 @@ ul li a {
 
 .me {
     display: flex;
-    flex-flow: row;
-    margin: 4%;
-    padding-bottom: 50px;
-    justify-content: stretch;
+    justify-content: flex-start;
     align-items: stretch;
+    margin: 4%;
 }
 
-.me h2 {
-    padding: 5px;
-    padding-right:10px;
-    border-right: 5px solid var(--dark);
-    flex-basis: 25%;
-}
 
-.section-title {
+h2.section-title {
+    font-size: 3vw;
     color: var(--dark);
-    font-size: 40px;
+    padding: 10px;
     text-align: right;
-    width: 100%;
-
+    width: 25%;
+    border-right: 10px solid var(--dark);
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 .content {
-    align-content: center;
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    border: none;
     padding: 0 40px;
-
+    flex: 1 0 85%;
 }
 
 .content p {
@@ -161,6 +157,14 @@ ul li a {
     font-size: 1.6vw;
     color: var(--dark);
     padding-bottom: 20px;
+
+}
+
+.title-helper{
+    display:flex;
+    flex: 1 0 15%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 /* Begin Work Styling */
@@ -223,13 +227,10 @@ ul li a {
 }
 
 
-
-
 /* Begin Contact Styling */
 
 .link-list{
     justify-content: center;
-    flex: wrap;
 }
 
 .link-item a {
@@ -240,11 +241,80 @@ ul li a {
 
 /* End Contact Styling */
 
-.flex-row {
-    display:flex;
+/* Begin Resume Styling */
+
+.resume-image img{
+    width: 100%;
+    height: 100%;
 }
 
 /* Media Queries */
+@media screen and (max-width: 980px){
+    header {
+        width: 100%;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    header h1 {
+        width: 100%;
+    }
+
+    header h1 a {
+        margin: 0 auto;
+        font-size: 35px;
+        padding: 20px;
+    }
+
+    header nav {
+        width: 75%;
+    }
+
+    header nav ul li a {
+        font-size: 25px;
+        border:none;
+        color: var(--contrast-color);
+    }
+
+    .hero {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hero-text, .hero-img {
+        width: 75%;
+    }
+
+    .hero-img {
+        width: 50%;
+    }
+
+    .hero-text {
+        font-size: 25px;
+        padding: 20px 0;
+    }
+
+    .project-grid-wrapper {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .content p, .text h3 {
+        font-size: 25px;
+    }
+
+    .text h4, .link-item a{
+        font-size: 20px;
+    }
+
+
+}
 
 
 
